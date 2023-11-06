@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Paragraph changed.";
+}
+</script>
+</head>
+<body>
+
+<h2>New Jersey</h2>
+
+<p id="demo">The Garden State...Not the armpit of American!</p>
+
+</body>
+</html> 
