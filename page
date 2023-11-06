@@ -1,5 +1,4 @@
- 'use strict';
-
+<script>
 
 let arr;
 arr = [12, 10, 9];
@@ -94,7 +93,4 @@ else
 
 let str = `The number is ${i}`;
 console.log(str); 
-
-console.log('Hello world');
-
 
