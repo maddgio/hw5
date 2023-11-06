@@ -1,78 +1,92 @@
-"use strict";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript in HTML</title>
+</head>
+<body>
 
-let arr = [12, 10, 9];
-console.log(arr[0]);
+<script>
+    "use strict";
 
-let w1 = 129.9;
-let a1 = 19;
-let str1 = "tom";
-let str2 = 'MIS3033';
+    let arr = [12, 10, 9];
+    console.log(arr[0]);
 
-let grade = 96.6;
-if (grade >= 90) {
-    console.log(`A`);
-} else {
-    console.log(`Not A`);
-}
+    let w1 = 129.9;
+    let a1 = 19;
+    let str1 = "tom";
+    let str2 = 'MIS3033';
 
-
-for (let i = 0; i < 20; i++) {
-    console.log(i);
-}
-
-let stu = {
-    name: "maddy",
-    id: "s123",
-    age: 19,
-    grade: 96.6,
-    getInfo: function () {
-        return this.id;
+    let grade = 96.6;
+    if (grade >= 90) {
+        console.log(`A`);
+    } else {
+        console.log(`Not A`);
     }
-};
 
-console.log(stu.getInfo());
-console.log(stu.age);
+    for (let i = 0; i < 20; i++) {
+        console.log(i);
+    }
 
-function divide(d1, d2) {
-    return d1 / d2;
-}
+    let stu = {
+        name: "maddy",
+        id: "s123",
+        age: 19,
+        grade: 96.6,
+        getInfo: function () {
+            return this.id;
+        }
+    };
 
-function add(n1, n2) {
-    return n1 + n2;
-}
+    console.log(stu.getInfo());
+    console.log(stu.age);
 
-let f2;
-f2 = (m1, m2) => m1 * m2;
+    function divide(d1, d2) {
+        return d1 / d2;
+    }
 
-let r = add(2, 3);
-r = divide(6, 2);
-r = f2(10, 2);
-console.log(r);
+    function add(n1, n2) {
+        return n1 + n2;
+    }
 
-const name = "Madison Giovenco";
-console.log(name);
+    let f2;
+    f2 = (m1, m2) => m1 * m2;
 
-const weight = 128.8;
-console.log(weight);
+    let r = add(2, 3);
+    r = divide(6, 2);
+    r = f2(10, 2);
+    console.log(r);
 
-{
-    let age2 = 20; // Local
-    var age3 = 19;
-}
+    const name = "Madison Giovenco";
+    console.log(name);
 
-console.log(age3);
+    const weight = 128.8;
+    console.log(weight);
 
-let age = 20;
-console.log(age);
+    {
+        let age2 = 20; // Local
+        var age3 = 19;
+    }
 
-let i = 20;
+    console.log(age3);
 
-if (i > 20) {
-    console.log("It is greater than 20");
-} else {
-    console.log("It is not greater than 20");
-}
+    let age = 20;
+    console.log(age);
 
-let str = `The number is ${i}`;
-console.log(str);
+    let i = 20;
 
+    if (i > 20) {
+        console.log("It is greater than 20");
+    } else {
+        console.log("It is not greater than 20");
+    }
+
+    let str = `The number is ${i}`;
+    console.log(str);
+
+    console.log('Hello world');
+</script>
+
+</body>
+</html>
