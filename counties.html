@@ -37,6 +37,9 @@
         </nav>
     </div>
 
+    <!-- Display the counties in the HTML content -->
+    <div id="counties-list"></div>
+
     <script>
         function listCounties() {
             const njCounties = [
@@ -63,10 +66,15 @@
                 "Warren"
             ];
 
-            console.log("List of New Jersey Counties:");
+            // Display the counties in the HTML content
+            const countiesListElement = document.getElementById("counties-list");
+            countiesListElement.innerHTML = "<h2>List of New Jersey Counties:</h2><ul>";
+
             for (let i = 0; i < njCounties.length; i++) {
-                console.log(njCounties[i]);
+                countiesListElement.innerHTML += "<li>" + njCounties[i] + "</li>";
             }
+
+            countiesListElement.innerHTML += "</ul>";
         }
 
         listCounties();
