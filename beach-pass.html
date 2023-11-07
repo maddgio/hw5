@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Beach Season Badge</title>
+</head>
+<body>
+
+<script>
+    function checkUserType() {
+        // Ask the user to click if they are a senior, adult, or child
+        var isSenior = confirm("Are you a senior?");
+        var isAdult = confirm("Are you an adult?");
+        
+        // If the user is not a senior or an adult, consider them as a child
+        var isChild = !isSenior && !isAdult;
+
+        // Display the corresponding season beach badge price
+        if (isSenior) {
+            alert("The beach season badge is $50 for seniors.");
+        } else if (isAdult) {
+            alert("The beach season badge is $80 for adults.");
+        } else if (isChild) {
+            alert("The beach season badge is $25 for children.");
+        }
+    }
+
+    // Call the function
+    checkUserType();
+</script>
+
+</body>
+</html>
