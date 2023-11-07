@@ -1,27 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sum Calculator</title>
+        <title>Population</title>
 </head>
 <body>
 
-<!-- Your content goes here -->
+<h2>Population </h2>
+<p>2023 Population:</p>
+<p id="demo"></p>
 
 <script>
-    function sumAll() {
-        let sum = 0;
-        for (let i = 0; i < arguments.length; i++) {
-            sum += arguments[i];
-        }
-        return sum;
-    }
-
-    let x = sumAll(275638,952997,466103,524907,95634,151356,849477,306601,703366,129777,380688,861418,644098,511151,655735,513936,65117,346875,146084,69815,110926);
-
-    // Display the result in the console
-    console.log("The sum is: " + x);
+function sumAll() {
+  let sum = 0;
+  for(let i = 0; i < arguments.length; i++) {
+    sum += arguments[i];
+  }
+  return sum;
+}
+document.getElementById("demo").innerHTML = sumAll(275638,952997,466103,524907,95634,151356,849477,306601,703366,129777,380688,861418,644098,511151,655735,513936,65117,346875,146084,69815,110926);
 </script>
 
 </body>
