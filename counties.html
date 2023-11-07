@@ -7,7 +7,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
     <title>NJ Counties</title>
     <style>
-        /* Add some styling for the blue border */
         #counties-list {
             border: 2px solid blue;
             padding: 10px;
@@ -17,41 +16,36 @@
             margin-right: auto;
         }
     </style>
+    
+<div class="alert alert-primary text-uppercase fs-4 fw-bold" style="width:1500px; length:1200px;">
+    <h1 align=center>The Garden State </h1>
+     <nav class="navbar navbar-expand-lg bg-body-primary ">
+    <a class="navbar-brand" align=center text-color=primary> NJ </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="population.html">Population</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="counties.html">Counties</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  href="taxes.html">NJ Taxes</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link active"  href="beach-pass.html">Beach Badges</a>
+        </li>
+      </ul>
+    </div>
+</nav>
 </head>
 <body>
-    <div class="text-bg-primary p-3"></div>
-    <div class="background"></div>
-
-    <div class="alert alert-primary text-uppercase fs-4 fw-bold" style="width:1500px; length:1200px;">
-        <h1 align="center">The Garden State</h1>
-        <nav class="navbar navbar-expand-lg bg-body-primary">
-            <a class="navbar-brand" align="center" text-color="primary"> NJ </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">HOME</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="population.html">Population</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="counties.html">Counties</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="taxes.html">NJ Taxes</a>
-                    </li>
-                     <li class="nav-item">
-                          <a class="nav-link"  href="beach-pass.html">Beach Badges</a>
-                     </li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-
-    <!-- Display the counties in the HTML content -->
     <div id="counties-list"></div>
 
     <script>
@@ -93,7 +87,11 @@
 
         listCounties();
 
-        function getHighestPopulationCounty() {
+<div id="resultContainer">
+</div>
+
+<script>
+    function getHighestPopulationCounty() {
         const countyPopulations = {
             "Atlantic": 55638,
             "Bergen": 950155,
@@ -128,11 +126,12 @@
             }
         }
 
-        alert('The New Jersey county with the highest population is: ' + highestPopulationCounty);
+        const resultContainer = document.getElementById("resultContainer");
+        resultContainer.innerHTML = 'The New Jersey county with the highest population is: ' + highestPopulationCounty;
     }
 
     getHighestPopulationCounty();
-        
-    </script>
+</script>
+
 </body>
 </html>
