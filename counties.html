@@ -92,6 +92,47 @@
         }
 
         listCounties();
+
+        function getHighestPopulationCounty() {
+        const countyPopulations = {
+            "Atlantic": 55638,
+            "Bergen": 950155,
+            "Burlington": 466103,
+            "Camden": 524907,
+            "Cape May": 95634,
+            "Cumberland": 151356,
+            "Essex": 849477,
+            "Gloucester": 306601,
+            "Hudson": 703366,
+            "Hunterdon": 129777,
+            "Mercer": 380688,
+            "Middlesex": 861418,
+            "Monmouth": 644098,
+            "Morris": 511151,
+            "Ocean": 655735,
+            "Passaic": 513936,
+            "Salem": 65117,
+            "Somerset": 346875,
+            "Sussex": 146084,
+            "Union": 69815,
+            "Warren": 110926
+        };
+
+        let highestPopulationCounty = "";
+        let highestPopulation = 0;
+
+        for (const county in countyPopulations) {
+            if (countyPopulations[county] > highestPopulation) {
+                highestPopulation = countyPopulations[county];
+                highestPopulationCounty = county;
+            }
+        }
+
+        alert('The New Jersey county with the highest population is: ' + highestPopulationCounty);
+    }
+
+    getHighestPopulationCounty();
+        
     </script>
 </body>
 </html>
