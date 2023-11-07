@@ -1,16 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Income Tax Calculator</title>
+  <div class="text-bg-primary p-3"</div>
+    <div class=background></div>
+  <head>
+     <meta charset="utf-8" />
+    
+        <!-- Bootstrap -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+    <title>Population</title>
+
+    <div class="alert alert-primary text-uppercase fs-4 fw-bold" style="width:1500px; length:1200px;">
+    <h1 align=center>The Garden State </h1>
+     <nav class="navbar navbar-expand-lg bg-body-primary ">
+    <a class="navbar-brand" align=center text-color=primary> OU </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="population.html">Population</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="counties.html">Counties</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active"  href="taxes.html">NJ Taxes</a>
+        </li>
+      </ul>
+    </div>
+</nav>
 </head>
 <body>
 
   <label for="income">Enter Your Yearly Income:</label>
   <input type="number" id="income" placeholder="Enter your income">
 
-  <button onclick="calculateTax()">Calculate Tax</button>
+  <button onclick="calculateTax()">Calculate NJ Tax</button>
 
   <p id="result"></p>
 
