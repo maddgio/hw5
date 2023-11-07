@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Tax Calculator</title>
+</head>
+<body>
+
+  <label for="income">Enter Your Yearly Income:</label>
+  <input type="number" id="income" placeholder="Enter your income">
+
+  <button onclick="calculateTax()">Calculate Tax</button>
+
+  <p id="result"></p>
+
+  <script>
+      function calculateTax() {
+          // Get the user's income from the input
+          let income = parseFloat(document.getElementById("income").value);
+
+          // Define tax rates for different income ranges in New Jersey
+          const taxRates = [
+              { range: 20000, rate: 0.01 },
+              { range: 50000, rate: 0.02 },
+              { range: 100000, rate: 0.03 },
+              { range: 500000, rate: 0.04 },
+              { range: Infinity, rate: 0.05 }
+          ];
+
+          // Calculate the tax based on the income and tax rates
+          let tax = 0;
+          for (let i = 0; i < taxRates.length; i++) {
+              if (income <= taxRates[i].range) {
+                  tax += income * taxRates[i].rate;
+                  break;
+              } else {
+                  tax += taxRates[i].range * taxRates[i].rate;
+                  income -= taxRates[i].range;
+              }
+          }
+
+          // Display the result
+          document.getElementById("result").innerHTML = "Your estimated income tax is: $" + tax.toFixed(2);
+      }
+  </script>
+
+</body>
+</html>
